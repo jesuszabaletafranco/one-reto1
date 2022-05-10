@@ -7,10 +7,21 @@ header {
     padding: 20px 0;
 }
 
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
 .caja{
     width: 940px;
     position: relative;
     margin: 0 auto;
+    text-align: center;
 }
 
 nav{
@@ -105,19 +116,13 @@ form label, form legend{
     margin: 0 0 10px;
 }
 
-.input-padron{
-    display: block;
-    margin: 0 0 20px;
-    padding: 10px 25px;
-    width: 50%;
-}
 
 .checkbox{
     margin:20px 0;
 }
 
 .enviar{
-    width: 40%;
+    width: 10%;
     padding: 15px 0;
     font-size: 18px;
     font-weight: bold;
@@ -131,7 +136,6 @@ form label, form legend{
 
 .enviar:hover{
     background: darkorange;
-    transform: scale(1.2);
 }
 
 table{
