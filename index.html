@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Encriptar y Desencriptar Texto - Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+		
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                <h1>Encriptar y Desencriptar Texto</h1>               
+            </div>
+        </header>
+        <main>
+            <form>
+                <label for="texto">Texto a encriptar o desencriptar</label>
+                <input type="text" id="texto" class="input-padron" required>                
+                <input type="button" value="Encriptar" id="bencriptar" class="enviar" onclick="encriptar()">
+				<input type="button" value="Desencriptar" id="bdesencriptar" class="enviar" onclick="desencriptar()">
+
+            </form>            
+        </main>
+        <footer>
+            <p class="copyright">&copy Copyright Alura - 2022</p>
+        </footer>
+    </body>
+
+	<script>
+		var texto = "";			
+					
+		function encriptar(){				
+			var texto2 = "";
+			texto = document.querySelector('#texto').value;
+			//alert("Encriptar :" + texto);			
+			for(var i = 0; i < texto.length; i++){
+				if(texto.charAt(i) == "e") texto2 += "enter";
+				else if(texto.charAt(i) == "i") texto2 +=  "imes";
+				else if(texto.charAt(i) == "a") texto2 +=  "ai";
+				else if(texto.charAt(i) == "o") texto2 +=  "ober";
+				else if(texto.charAt(i) == "u") texto2 +=  "ufat";
+				else texto2 += texto.charAt(i);
+				//alert('Encriptar : ' + texto.charAt(i));
+			}
+			document.querySelector('#texto').value = texto2;
+		}
+		function desencriptar(){				
+			texto = document.querySelector('#texto').value;				
+			for(var i = 0; i < texto.length; i++){
+				texto = texto.replace("enter", "e");
+				texto = texto.replace("imes", "i");
+				texto = texto.replace("ai", "a");
+				texto = texto.replace("ober", "o");
+				texto = texto.replace("ufat", "u");
+			}
+			document.querySelector('#texto').value = texto;
+		}
+	
+	</script>
+	
+</html>
